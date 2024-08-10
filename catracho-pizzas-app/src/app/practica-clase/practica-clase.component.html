@@ -1,0 +1,17 @@
+<ion-content>
+  <ion-button expand="block" color="danger" size="default" fill="outline" id="Alerta">
+    Alerta
+  </ion-button>
+  <!--
+  trigger = "idElementoConAlerta" aqui se tiene que usar el id del boton donde se quiere mostrar la alerta
+  [buttons]="funcionConBotones" aqui de utiliza property binding para enlazar la funcion 
+  con los botones a utilizar en la alerta
+  -->
+  <ion-alert
+    trigger="Alerta"
+    header="Titulo"
+    subHeader="Subtitulo"
+    message="Mensaje a insertar en la alerta."
+    [buttons]="BotonesAlertByID"
+  ></ion-alert>
+</ion-content>
