@@ -1,0 +1,53 @@
+<ion-content>
+  <ion-card style="background-color: aliceblue">
+    
+    <!--Con IonImg se puede colocar una imagen en el ion-card-->
+    <ion-img src="https://img001.prntscr.com/file/img001/HOPQYcJUQfmcNoIbxsIJ2w.png"></ion-img>
+    
+    <!--En el Header se utilizan el titulo y subtitulo segun caso de uso-->
+    <ion-card-header>
+    
+      <ion-card-title style="text-align: center; color: rgb(236, 22, 22); font-weight: bold">
+        BIG NEW YORKER BACON & BANANA PEPPERS
+      </ion-card-title>
+    
+      <!--<ion-card-subtitle>Subtitle</ion-card-subtitle>-->
+    </ion-card-header>
+    
+    <!--Contenido del IonCard-->
+    <ion-card-content>
+      <!--Parrafo del IonCard-->
+      <p style="color: black">
+        Es una pizza de gran tamaño, inspirada al estilo New York con rebanadas
+        de chile banana peppers de sabor suave con toque ácido, con una mezcla
+        de orégano y queso parmesano sobre los ingredientes y mantequilla de ajo
+        a la orilla.
+      </p>
+
+      <!--IonItem Precio DESDE-->
+      <ion-item style="--background: aliceblue; border-bottom: none; border-top: 1px solid #ccc;">
+        <p style="color: rgb(0, 0, 0); font-weight: bold">DESDE</p>
+        <p style="color: rgb(236, 22, 22); font-weight: bold; margin-left: 20px">
+          LPS. 329.00
+        </p>
+      </ion-item>
+
+      <!--IonItem de Cantidad-->
+      <ion-item style="--background: aliceblue; ">
+        <p style="color: rgb(0, 0, 0); font-weight: bold">CANTIDAD:</p>
+        <ion-button (click)="quitar()" style="margin-left: 10px">-</ion-button>
+        <p style="color: black; font-weight: bold; margin-left: 10px">
+          {{ cantidad }}
+        </p>
+        <ion-button (click)="agregar()" style="margin-left: 10px">+</ion-button>
+        <ion-button (click)="alertControllerFunction()" color="success" style="margin-left: 80px">
+          <ion-label style="color: rgb(255, 249, 249); font-weight: bold">
+            ORDENAR
+          </ion-label>
+        </ion-button>
+      </ion-item>
+    </ion-card-content>
+
+    <!--Al final del content se pueden colocar botones-->
+  </ion-card>
+</ion-content>

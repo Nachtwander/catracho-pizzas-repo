@@ -5,7 +5,10 @@ import {
   IonTitle,
   IonContent,
 } from '@ionic/angular/standalone';
+//Importamos componente de practica de la clase para usarlo en el HTML
 import { PracticaClaseComponent } from '../practica-clase/practica-clase.component';
+
+import { ProductCardComponent } from '../components/product-card/product-card.component';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +20,8 @@ import { PracticaClaseComponent } from '../practica-clase/practica-clase.compone
     IonToolbar,
     IonTitle,
     IonContent,
-    PracticaClaseComponent,
+    PracticaClaseComponent, //Debe colocarse en los imports
+    ProductCardComponent,
   ],
 })
 export class HomePage {
