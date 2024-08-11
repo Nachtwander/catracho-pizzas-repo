@@ -1,5 +1,5 @@
 <ion-content>
-  <ion-card style="background-color: aliceblue">
+  <ion-card style="background-color: aliceblue; ">
     
     <!--Con IonImg se puede colocar una imagen en el ion-card-->
     <ion-img src="https://img001.prntscr.com/file/img001/HOPQYcJUQfmcNoIbxsIJ2w.png"></ion-img>
@@ -24,28 +24,37 @@
         a la orilla.
       </p>
 
-      <!--IonItem Precio DESDE-->
-      <ion-item style="--background: aliceblue; border-bottom: none; border-top: 1px solid #ccc;">
-        <p style="color: rgb(0, 0, 0); font-weight: bold">DESDE</p>
-        <p style="color: rgb(236, 22, 22); font-weight: bold; margin-left: 20px">
-          LPS. 329.00
-        </p>
-      </ion-item>
+      
+      
+      <ion-list no-lines style="background-color: aliceblue; ">
 
-      <!--IonItem de Cantidad-->
-      <ion-item style="--background: aliceblue; ">
-        <p style="color: rgb(0, 0, 0); font-weight: bold">CANTIDAD:</p>
-        <ion-button (click)="quitar()" style="margin-left: 10px">-</ion-button>
-        <p style="color: black; font-weight: bold; margin-left: 10px">
-          {{ cantidad }}
-        </p>
-        <ion-button (click)="agregar()" style="margin-left: 10px">+</ion-button>
-        <ion-button (click)="alertControllerFunction()" color="success" style="margin-left: 80px">
-          <ion-label style="color: rgb(255, 249, 249); font-weight: bold">
-            ORDENAR
-          </ion-label>
-        </ion-button>
-      </ion-item>
+        <!-- Div de Precio DESDE -->
+        <div style="display: flex; align-items: center; margin-bottom: 10px; margin-top: 10px; border-top: 1px solid #000000;">
+          <p style="color: rgb(0, 0, 0); font-weight: bold;">DESDE</p>
+          <p style="color: rgb(236, 22, 22); font-weight: bold; margin-left: 20px;">
+            LPS. 329.00
+          </p>
+        </div>
+      
+        <!-- Div de Cantidad -->
+        <div style="display: flex; align-items: center;">
+          <p style="color: rgb(0, 0, 0); font-weight: bold;">CANTIDAD:</p>
+          <ion-button (click)="quitar()" style="margin-left: 10px;">-</ion-button>
+          <p style="color: black; font-weight: bold; margin-left: 10px;">
+            {{ cantidad }}
+          </p>
+          <ion-button (click)="agregar()" style="margin-left: 10px;">+</ion-button>
+          <ion-button (click)="alertControllerFunction()" color="success" style="margin-left: 40px;">
+            <ion-label style="color: rgb(255, 249, 249); font-weight: bold;">
+              ORDENAR
+            </ion-label>
+          </ion-button>
+        </div>
+      
+      </ion-list>
+      
+      
+      
     </ion-card-content>
 
     <!--Al final del content se pueden colocar botones-->

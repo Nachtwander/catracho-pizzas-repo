@@ -13,8 +13,7 @@ import {
   IonImg,
   IonList,
   IonLabel,
-  IonGrid,
-  IonCol,
+  IonIcon,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -35,8 +34,7 @@ import {
     IonImg,
     IonList,
     IonLabel,
-    IonGrid,
-    IonCol,
+    IonIcon,
   ],
 })
 export class ProductCardComponent implements OnInit {
