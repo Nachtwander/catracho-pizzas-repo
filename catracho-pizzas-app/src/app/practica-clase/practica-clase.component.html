@@ -1,6 +1,7 @@
 <ion-content>
+  <!--IonAlert: Creando alertas por ID (Inline Alert)-->
   <ion-button expand="block" color="danger" size="default" fill="outline" id="Alerta">
-    Alerta
+    Alerta Inline
   </ion-button>
   <!--
   trigger = "idElementoConAlerta" aqui se tiene que usar el id del boton donde se quiere mostrar la alerta
@@ -14,4 +15,37 @@
     message="Mensaje a insertar en la alerta."
     [buttons]="BotonesAlertByID"
   ></ion-alert>
+
+  <br />
+  <br />
+
+  <!--IonAlert: Creando alertas por un Boolean (IsOpen Property)-->
+  <ion-button (click)="openAlert()" expand="block" color="primary" size="default" fill="outline">
+    Alerta Is-Open
+  </ion-button>
+
+  <!--
+  [isOpen] property binding que evalua si la variable entre comillas sea true o false para mostrar la alerta
+  (didDismiss) es una funcion que devuelve el valor isOpen a lo contrario segun funcion openAlert().
+  si quitamos el didDismiss tendriamos que dar doble click en el boton para mostrar la alerta
+  -->
+  <ion-alert
+    [isOpen]="isOpen"
+    header="Titulo"
+    subHeader="Subtitulo"
+    message="Mensaje a insertar en la alerta."
+    [buttons]="BotonesAlertIsOpen"
+    (didDismiss)="openAlert()"
+  ></ion-alert>
+
+  <br />
+  <br />
+
+  <!--IonAlert: Creando alertas con el AlertController-->
+  <ion-button (click)="alertControllerFunction()" expand="block" color="success" size="default" fill="outline">
+    Alerta Alert-Controler
+  </ion-button>
+
+
+
 </ion-content>
