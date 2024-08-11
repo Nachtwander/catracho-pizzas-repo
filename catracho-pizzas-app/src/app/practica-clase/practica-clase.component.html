@@ -7,14 +7,17 @@
   trigger = "idElementoConAlerta" aqui se tiene que usar el id del boton donde se quiere mostrar la alerta
   [buttons]="funcionConBotones" aqui de utiliza property binding para enlazar la funcion 
   con los botones a utilizar en la alerta
+  Con [inputs] se hace binding de los inputs creados para las alertas
   -->
-  <ion-alert
-    trigger="Alerta"
-    header="Titulo"
-    subHeader="Subtitulo"
+  <ion-alert 
+    trigger="Alerta" 
+    header="Titulo" 
+    subHeader="Subtitulo" 
     message="Mensaje a insertar en la alerta."
     [buttons]="BotonesAlertByID"
-  ></ion-alert>
+    [inputs]="inputsAlertByID"
+    >
+  </ion-alert>
 
   <br />
   <br />
@@ -29,14 +32,14 @@
   (didDismiss) es una funcion que devuelve el valor isOpen a lo contrario segun funcion openAlert().
   si quitamos el didDismiss tendriamos que dar doble click en el boton para mostrar la alerta
   -->
-  <ion-alert
-    [isOpen]="isOpen"
-    header="Titulo"
-    subHeader="Subtitulo"
+  <ion-alert 
+    [isOpen]="isOpen" 
+    header="Titulo" 
+    subHeader="Subtitulo" 
     message="Mensaje a insertar en la alerta."
-    [buttons]="BotonesAlertIsOpen"
-    (didDismiss)="openAlert()"
-  ></ion-alert>
+    [buttons]="BotonesAlertIsOpen" 
+    (didDismiss)="openAlert()">
+  </ion-alert>
 
   <br />
   <br />
@@ -45,7 +48,5 @@
   <ion-button (click)="alertControllerFunction()" expand="block" color="success" size="default" fill="outline">
     Alerta Alert-Controler
   </ion-button>
-
-
 
 </ion-content>

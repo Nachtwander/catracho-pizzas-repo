@@ -17,6 +17,14 @@ import {
 export class PracticaClaseComponent implements OnInit {
   ngOnInit() {}
 
+  //inputs para las alertas
+  inputsAlertByID = [
+    {
+      placeholder: 'texto placeholder',
+      type: 'number',
+    },
+  ];
+
   BotonesAlertByID = [
     //primer boton de la alerta
     //Todos los botones cuentan con 4 propiedades: text, role, cssClass y handler
@@ -78,6 +86,9 @@ export class PracticaClaseComponent implements OnInit {
 
   //Injectamos la clase AlertController que construya las alertas con la variable alertController
   constructor(private alertController: AlertController) {}
+  /*tambien se puede hacer con: 
+  private alertController: AlertController = inject(AlertController) 
+  se debe importar el inject de angular core*/
 
   async alertControllerFunction(): Promise<void> {
     //creamos una alerta mandando a llamar la clase alerController y el metodo .create
@@ -87,9 +98,23 @@ export class PracticaClaseComponent implements OnInit {
       subHeader: 'Subtitulo',
       message: 'Mensaje a insertar en la alerta.',
       buttons: this.BotonesAlertController,
+      inputs: this.inputsAlertController,
     });
-    await alert.present();
+    await alert.present(); //esperar a que una vez que se creo la alerta mostrarla en pantalla
   }
+
+  inputsAlertController = [
+    //primer input
+    {
+      placeholder: 'texto placeholder',
+      type: 'number' as const, // Añadimos 'as const' para que se tome como un valor literal.
+    },
+    //segundo input
+    {
+      placeholder: 'email',
+      type: 'email' as const,
+    }
+  ];
 
   BotonesAlertController = [
     //primer boton de la alerta
