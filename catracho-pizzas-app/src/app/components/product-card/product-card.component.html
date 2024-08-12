@@ -1,4 +1,5 @@
-<ion-content>
+<ion-content style="--background: white;">
+  
   <ion-card style="background-color: aliceblue; ">
     
     <!--Con IonImg se puede colocar una imagen en el ion-card-->
@@ -43,6 +44,7 @@
           <p style="color: black; font-weight: bold; margin-left: 10px;">
             {{ cantidad }}
           </p>
+          
           <ion-button (click)="agregar()" style="margin-left: 10px;">+</ion-button>
           <ion-button (click)="alertControllerFunction()" color="success" style="margin-left: 40px;">
             <ion-label style="color: rgb(255, 249, 249); font-weight: bold;">
@@ -52,11 +54,9 @@
         </div>
       
       </ion-list>
-      
-      
-      
+        
     </ion-card-content>
-
-    <!--Al final del content se pueden colocar botones-->
   </ion-card>
+  
 </ion-content>
+

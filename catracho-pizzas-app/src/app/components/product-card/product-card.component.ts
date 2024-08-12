@@ -1,4 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
+import { addIcons } from 'ionicons';
 import {
   IonAlert,
   IonContent,
@@ -39,6 +40,10 @@ import {
 })
 export class ProductCardComponent implements OnInit {
   ngOnInit() {}
+
+  constructor(){
+    
+  }
 
   cantidad: number = 1;
 
